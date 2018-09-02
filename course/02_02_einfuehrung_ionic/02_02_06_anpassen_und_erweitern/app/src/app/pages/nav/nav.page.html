@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+    <ion-title>Navigatin in Ionic 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<a href="https://www.joshmorony.com/converting-ionic-3-push-pop-navigation-to-angular-routing-in-ionic-4/">Details here</a>
+
+
+
+
+In Ionic 4:
+<!--
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+];
+@NgModule({
+ imports: [RouterModule.forRoot(routes)],
+ exports: [RouterModule]
+})
+export class AppRoutingModule { }
+And now to navigate to the HomePage we have to do the following:
+
+import { Router } from '@angular/router';
+constructor(private router: Router) { }
+navigateToHome(){
+  this.router.navigate(['/home']);
+}  
+-->
+
+<h2>Push</h2>
+Where we would “push” pages like the detail page or the categories page in Ionic 3, with Ionic 4 and Angular routing we still just link to the route as usual using href:
+
+<ion-button href="/products/12" routerDirection="forward"></ion-button>>
+However, this time we supply a routerDirection of forward. When we are transitioning from the products page to the product-detail page, we are traversing forward through our applications structure.
+
+If we wanted to perform the navigation programmatically, we would do this:
+
+this.navCtrl.goForward('/products/12');
+
+<h2>Pop</h2>
+Once again, navigating backward is a case of linking to the appropriate route and specifying the direction:
+
+<ion-button href="/products" routerDirection="backward"></ion-button>
+However, with backward navigation, you will commonly use Ionic’s back button component to do this. 
+In that case, all you need to do is add the component to your template:
+
+<ion-back-button defaultHref="/products"></ion-back-button>
+
+</ion-content>

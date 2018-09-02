@@ -1,0 +1,36 @@
+<ion-app>
+	<ion-header #header>
+	  <ion-toolbar style="display: none" #toolbar>
+		<ion-title>Hidden Toolbar</ion-title>
+	  </ion-toolbar>
+		<ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+		<ion-title>Content - Basic</ion-title>
+	  </ion-toolbar>
+	</ion-header>
+  
+	  <ion-content padding style="text-align: center" #content>
+		<p>
+		<ion-button (click)="toggleFullscreen(content)">Toggle content.fullscreen</ion-button>
+		<p>
+		  <ion-button (click)="toggleDisplay(header)" color="secondary">Toggle header</ion-button>
+		  <ion-button (click)="toggleDisplay(footer)" color="secondary">Toggle footer</ion-button>
+		  <ion-button (click)="toggleDisplay(toolbar)" color="secondary">Toggle 2nd toolbar</ion-button>
+		</p>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	  </ion-content>
+  
+  
+	<ion-footer #footer>
+		<ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+		<ion-title>Footer</ion-title>
+	  </ion-toolbar>
+	</ion-footer>
+  </ion-app>

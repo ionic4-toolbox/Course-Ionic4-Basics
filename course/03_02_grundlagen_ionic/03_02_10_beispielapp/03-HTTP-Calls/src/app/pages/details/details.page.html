@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-bounce>
+    <ion-card *ngIf="item">
+        <ion-item class="avatar">
+            <ion-avatar item-start>
+                <img [src]="item?.image">
+            </ion-avatar>
+            <h2 class="title">{{ item?.title }}</h2>
+        </ion-item>
+
+        <ion-item>
+            <img src="https://placeimg.com/640/480/nature">
+        </ion-item>
+
+        <ion-card-content>
+            <p>{{ item?.description }}</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-item>
+                <ion-button icon-left clear small class="action-button">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>12 Likes</div>
+                </ion-button>
+                <ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>4 Comments</div>
+                </ion-button>
+                <ion-note slot="end">
+                    11h ago
+                </ion-note>
+            </ion-item>
+        </ion-row>
+
+    </ion-card>
+</ion-content>

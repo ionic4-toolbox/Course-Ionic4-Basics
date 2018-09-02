@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo LATEST=10.9.0
+echo nvm install $LATEST --latest-npm
+echo node --version
+echo npm --version
+echo nvm alias latest $LATEST
+echo nvm alias default $LATEST
+echo which node

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+npm -g install ionic@latest
+npm -g install capacitor@latest
+

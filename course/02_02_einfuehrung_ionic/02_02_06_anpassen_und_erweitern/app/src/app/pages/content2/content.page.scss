@@ -1,0 +1,11 @@
+div.box {
+	display: block;
+	margin: 15px auto;
+	max-width: 150px;
+	height: 150px;
+	background: blue;
+  }
+
+  div.box:last-of-type {
+	background: yellow;
+  }

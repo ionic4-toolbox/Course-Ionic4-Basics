@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+    <ion-title>ActionSheet 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding fullscreen>
+  <ion-button expand="block" id="basic" (click)="presentBasic()">Basic</ion-button>
+  <ion-button expand="block" id="noBackdropDismiss" (click)="presentNoBackdropDismiss()">No Backdrop Dismiss</ion-button>
+  <ion-button expand="block" id="alertFromActionSheet" (click)="presentAlert()">Alert from Action Sheet</ion-button>
+  <ion-button expand="block" id="scrollableOptions" (click)="presentScroll()">Scrollable Options</ion-button>
+  <ion-button expand="block" id="scrollWithoutCancel" (click)="presentScrollNoCancel()">Scroll Without Cancel</ion-button>
+  <ion-button expand="block" id="cancelOnly" (click)="presentCancelOnly()">Cancel Only</ion-button>
+  <ion-button expand="block" id="icons" (click)="presentIcons()">Icons</ion-button>
+  <ion-button expand="block" id="cssClass" (click)="presentWithCssClass()">Custom CSS Class</ion-button>
+</ion-content>
